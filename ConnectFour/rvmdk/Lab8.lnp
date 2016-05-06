@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\rvmdk\lab8.o" ".\rvmdk\startup_rvmdk.o" ".\driverlib-cm3.lib" ".\ECE210.lib" --library_type=microlib --strict --scatter "Lab8.sct" 
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\rvmdk\Lab8.map" -o ".\rvmdk\Lab8.axf"

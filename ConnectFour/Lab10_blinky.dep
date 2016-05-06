@@ -1,0 +1,5 @@
+Dependencies for Project 'Lab10', Target 'blinky': (DO NOT MODIFY !)
+F (.\startup_rvmdk.S)(0x508FF960)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Luminary-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (.\Lab10.c)(0x52A6376F)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I..\..\..-I D:\ARM\RV31\INC-I D:\ARM\CMSIS\Include-I D:\ARM\Inc\Luminary-Drvmdk -DPART_LM3S1968 -o .\rvmdk\lab10.o --omf_browse .\rvmdk\lab10.crf --depend .\rvmdk\lab10.d)
+F (.\driverlib-cm3.lib)(0x5012EB56)()
+F (.\ECE210.lib)(0x515F15FC)()

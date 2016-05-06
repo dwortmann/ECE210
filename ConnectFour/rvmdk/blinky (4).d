@@ -1,0 +1,10 @@
+.\rvmdk\blinky.o: blinky.c
+.\rvmdk\blinky.o: ..\..\..\inc/lm3s1968.h
+.\rvmdk\blinky.o: ..\..\..\inc/hw_memmap.h
+.\rvmdk\blinky.o: ..\..\..\inc/hw_sysctl.h
+.\rvmdk\blinky.o: ..\..\..\inc/hw_types.h
+.\rvmdk\blinky.o: ..\..\..\driverlib/gpio.h
+.\rvmdk\blinky.o: ..\..\..\driverlib/pin_map.h
+.\rvmdk\blinky.o: ..\..\..\driverlib/sysctl.h
+.\rvmdk\blinky.o: ..\..\..\driverlib/systick.h
+.\rvmdk\blinky.o: LED.c

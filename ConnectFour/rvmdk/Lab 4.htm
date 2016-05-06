@@ -1,0 +1,224 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\rvmdk\Lab 4.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\rvmdk\Lab 4.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 791]: Last Updated: Thu Oct 11 13:37:31 2012
+<BR><P>
+<H3>Maximum Stack Usage =          8 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; sysTickWait1mS
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[5]">Reset_Handler</a>
+ <LI><a href="#[1]">NmiSR</a>
+ <LI><a href="#[2]">FaultISR</a>
+ <LI><a href="#[3]">IntDefaultHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[1]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1]">NmiSR</a><BR>
+ <LI><a href="#[2]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2]">FaultISR</a><BR>
+ <LI><a href="#[3]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">IntDefaultHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">FaultISR</a> from startup_rvmdk.o(RESET) referenced from startup_rvmdk.o(RESET)
+ <LI><a href="#[3]">IntDefaultHandler</a> from startup_rvmdk.o(RESET) referenced 51 times from startup_rvmdk.o(RESET)
+ <LI><a href="#[1]">NmiSR</a> from startup_rvmdk.o(RESET) referenced from startup_rvmdk.o(RESET)
+ <LI><a href="#[5]">Reset_Handler</a> from startup_rvmdk.o(RESET) referenced from startup_rvmdk.o(RESET)
+ <LI><a href="#[4]">main</a> from lab5.o(i.main) referenced from entry8.o(.ARM.Collect$$$$00000009)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[5]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[6]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+</UL>
+
+<P><STRONG><a name="[1d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+
+<P><STRONG><a name="[7]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[16]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[1e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+
+<P><STRONG><a name="[1f]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8.o(.ARM.Collect$$$$00000009))
+
+<P><STRONG><a name="[1a]"></a>LEDBARInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, ledbaroutput.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1c]"></a>LEDBAROutput</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ledbaroutput.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[20]"></a>LEDBAR_TurnOn</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, ledbaroutput.o(.text), UNUSED)
+
+<P><STRONG><a name="[21]"></a>LEDBAR_TurnOff</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, ledbaroutput.o(.text), UNUSED)
+
+<P><STRONG><a name="[18]"></a>PBSwInit</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, pushbutton.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1b]"></a>read_PBSwitchNum</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, pushbutton.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22]"></a>read_PBSwitches</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pushbutton.o(.text), UNUSED)
+
+<P><STRONG><a name="[17]"></a>RGB_LEDInit</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, rgb_led.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[23]"></a>getDutyCycle</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, rgb_led.o(.text), UNUSED)
+
+<P><STRONG><a name="[9]"></a>setDutyCycle</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, rgb_led.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmple
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+</UL>
+
+<P><STRONG><a name="[10]"></a>turnOn</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, rgb_led.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_RGB_LED
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[11]"></a>turnOff</STRONG> (Thumb, 88 bytes, Stack size 0 bytes, rgb_led.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_RGB_LED
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d]"></a>PWM_RGB_LED</STRONG> (Thumb, 174 bytes, Stack size 8 bytes, rgb_led.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnOn
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnOff
+</UL>
+
+<P><STRONG><a name="[24]"></a>SYSTICKIntHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, ece353_systick.o(.text), UNUSED)
+
+<P><STRONG><a name="[19]"></a>sysTickInit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, ece353_systick.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[25]"></a>sysTickInitInt</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, ece353_systick.o(.text), UNUSED)
+
+<P><STRONG><a name="[13]"></a>sysTickWait</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ece353_systick.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait1uS
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait1mS
+</UL>
+
+<P><STRONG><a name="[12]"></a>sysTickWait1uS</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ece353_systick.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait
+</UL>
+
+<P><STRONG><a name="[14]"></a>sysTickWait1mS</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ece353_systick.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = sysTickWait1mS
+</UL>
+<BR>[Calls]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait
+</UL>
+<BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait1S
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[15]"></a>sysTickWait1S</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ece353_systick.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait1mS
+</UL>
+
+<P><STRONG><a name="[e]"></a>__aeabi_fmul</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, fmul.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_RGB_LED
+</UL>
+
+<P><STRONG><a name="[f]"></a>__aeabi_f2iz</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, ffixi.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_RGB_LED
+</UL>
+
+<P><STRONG><a name="[a]"></a>__aeabi_f2d</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, f2d.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDutyCycle
+</UL>
+
+<P><STRONG><a name="[b]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDutyCycle
+</UL>
+
+<P><STRONG><a name="[26]"></a>__aeabi_cfcmpeq</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, cfcmple.o(.text), UNUSED)
+
+<P><STRONG><a name="[c]"></a>__aeabi_cfcmple</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, cfcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDutyCycle
+</UL>
+
+<P><STRONG><a name="[27]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+
+<P><STRONG><a name="[8]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[28]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[29]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[2a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[2b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[4]"></a>main</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, lab5.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = main &rArr; sysTickWait1mS
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnOn
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnOff
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickWait1mS
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysTickInit
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_PBSwitchNum
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RGB_LEDInit
+<LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PBSwInit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDBAROutput
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDBARInit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry8.o(.ARM.Collect$$$$00000009)
+</UL><P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[1]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[2]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

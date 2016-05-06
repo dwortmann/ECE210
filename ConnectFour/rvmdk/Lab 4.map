@@ -1,0 +1,285 @@
+ARM Linker, 4.1 [Build 791] [Evaluation]
+
+==============================================================================
+
+Section Cross References
+
+    lab5.o(i.main) refers to rgb_led.o(.text) for RGB_LEDInit
+    lab5.o(i.main) refers to pushbutton.o(.text) for PBSwInit
+    lab5.o(i.main) refers to ece353_systick.o(.text) for sysTickInit
+    lab5.o(i.main) refers to ledbaroutput.o(.text) for LEDBARInit
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    rgb_led.o(.text) refers to f2d.o(.text) for __aeabi_f2d
+    rgb_led.o(.text) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    rgb_led.o(.text) refers to cfcmple.o(.text) for __aeabi_cfcmple
+    rgb_led.o(.text) refers to fmul.o(.text) for __aeabi_fmul
+    rgb_led.o(.text) refers to ffixi.o(.text) for __aeabi_f2iz
+    rgb_led.o(.text) refers to rgb_led.o(.data) for periodIter
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8.o(.ARM.Collect$$$$00000009) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cfcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_rvmdk.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry8.o(.ARM.Collect$$$$00000009) refers to lab5.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup_rvmdk.o(HEAP), (0 bytes).
+    Removing startup_rvmdk.o(.text), (0 bytes).
+
+2 unused section(s) (total 0 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      252  startup_rvmdk.o(RESET)
+    ../../microlib/f2d.c                     0x00000000   Number         0  f2d.o ABSOLUTE
+    ../../microlib/fpfix.c                   0x00000000   Number         0  ffixi.o ABSOLUTE
+    ../../microlib/fpmul.c                   0x00000000   Number         0  fmul.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry8.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry5.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry2.o ABSOLUTE
+    ../../microlib/stubs.s                   0x00000000   Number         0  iusefp.o ABSOLUTE
+    LEDBarOutput.c                           0x00000000   Number         0  ledbaroutput.o ABSOLUTE
+    Lab5.c                                   0x00000000   Number         0  lab5.o ABSOLUTE
+    Pushbutton.c                             0x00000000   Number         0  pushbutton.o ABSOLUTE
+    RGB_LED.c                                0x00000000   Number         0  rgb_led.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    cfcmple.s                                0x00000000   Number         0  cfcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    ece353_systick.c                         0x00000000   Number         0  ece353_systick.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    NmiSR                                    0x000000f5   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x000000f7   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x000000f9   Thumb Code     0  startup_rvmdk.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000000fc   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000fc   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x00000100   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x00000104   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$00000009                 0x00000104   Section        8  entry8.o(.ARM.Collect$$$$00000009)
+    .ARM.Collect$$$$00002712                 0x0000010c   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0000010c   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x00000110   Section        0  ledbaroutput.o(.text)
+    .text                                    0x0000022c   Section        0  pushbutton.o(.text)
+    .text                                    0x000002b8   Section        0  rgb_led.o(.text)
+    .text                                    0x00000544   Section        0  ece353_systick.o(.text)
+    .text                                    0x0000061c   Section        0  fmul.o(.text)
+    .text                                    0x00000688   Section        0  ffixi.o(.text)
+    .text                                    0x000006ba   Section        0  f2d.o(.text)
+    .text                                    0x000006e8   Section       40  cdrcmple.o(.text)
+    .text                                    0x00000710   Section       20  cfcmple.o(.text)
+    .text                                    0x00000724   Section        0  iusefp.o(.text)
+    .text                                    0x00000724   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x00000748   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00000756   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00000758   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x00000766   Section        0  lab5.o(i.main)
+    .data                                    0x20000000   Section       28  rgb_led.o(.data)
+    redDC                                    0x20000000   Data           4  rgb_led.o(.data)
+    greenDC                                  0x20000004   Data           4  rgb_led.o(.data)
+    blueDC                                   0x20000008   Data           4  rgb_led.o(.data)
+    periodIter                               0x2000000c   Data           4  rgb_led.o(.data)
+    redIter                                  0x20000010   Data           4  rgb_led.o(.data)
+    greenIter                                0x20000014   Data           4  rgb_led.o(.data)
+    blueIter                                 0x20000018   Data           4  rgb_led.o(.data)
+    STACK                                    0x20000020   Section      256  startup_rvmdk.o(STACK)
+    StackMem                                 0x20000020   Data           0  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  lab5.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    Reset_Handler                            0x000000f1   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x000000fd   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000fd   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x00000101   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x00000105   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x00000105   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_init                               0x00000105   Thumb Code     0  entry8.o(.ARM.Collect$$$$00000009)
+    LEDBARInit                               0x00000111   Thumb Code    44  ledbaroutput.o(.text)
+    LEDBAROutput                             0x0000013d   Thumb Code    10  ledbaroutput.o(.text)
+    LEDBAR_TurnOn                            0x00000147   Thumb Code   102  ledbaroutput.o(.text)
+    LEDBAR_TurnOff                           0x000001ad   Thumb Code   102  ledbaroutput.o(.text)
+    PBSwInit                                 0x0000022d   Thumb Code    44  pushbutton.o(.text)
+    read_PBSwitchNum                         0x00000259   Thumb Code    60  pushbutton.o(.text)
+    read_PBSwitches                          0x00000295   Thumb Code    14  pushbutton.o(.text)
+    RGB_LEDInit                              0x000002b9   Thumb Code    68  rgb_led.o(.text)
+    getDutyCycle                             0x000002fd   Thumb Code    70  rgb_led.o(.text)
+    setDutyCycle                             0x00000343   Thumb Code   106  rgb_led.o(.text)
+    turnOn                                   0x000003ad   Thumb Code    88  rgb_led.o(.text)
+    turnOff                                  0x00000405   Thumb Code    88  rgb_led.o(.text)
+    PWM_RGB_LED                              0x0000045d   Thumb Code   174  rgb_led.o(.text)
+    SYSTICKIntHandler                        0x00000545   Thumb Code     2  ece353_systick.o(.text)
+    sysTickInit                              0x00000547   Thumb Code    30  ece353_systick.o(.text)
+    sysTickInitInt                           0x00000565   Thumb Code    56  ece353_systick.o(.text)
+    sysTickWait                              0x0000059d   Thumb Code    28  ece353_systick.o(.text)
+    sysTickWait1uS                           0x000005b9   Thumb Code    30  ece353_systick.o(.text)
+    sysTickWait1mS                           0x000005d7   Thumb Code    32  ece353_systick.o(.text)
+    sysTickWait1S                            0x000005f7   Thumb Code    32  ece353_systick.o(.text)
+    __aeabi_fmul                             0x0000061d   Thumb Code   108  fmul.o(.text)
+    __aeabi_f2iz                             0x00000689   Thumb Code    50  ffixi.o(.text)
+    __aeabi_f2d                              0x000006bb   Thumb Code    44  f2d.o(.text)
+    __aeabi_cdrcmple                         0x000006e9   Thumb Code    38  cdrcmple.o(.text)
+    __aeabi_cfcmpeq                          0x00000711   Thumb Code     0  cfcmple.o(.text)
+    __aeabi_cfcmple                          0x00000711   Thumb Code    20  cfcmple.o(.text)
+    __I$use$fp                               0x00000725   Thumb Code     0  iusefp.o(.text)
+    __scatterload                            0x00000725   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000725   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x00000749   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00000757   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00000759   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x00000767   Thumb Code   112  lab5.o(i.main)
+    Region$$Table$$Base                      0x000007d8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000007f8   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20000120   Data           0  startup_rvmdk.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000f1
+
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00000814, Max: 0x00040000, ABSOLUTE)
+
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x000007f8, Max: 0x00040000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000fc   Code   RO           14  * RESET               startup_rvmdk.o
+    0x000000fc   0x00000000   Code   RO          148  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000fc   0x00000004   Code   RO          161    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000100   0x00000004   Code   RO          164    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000104   0x00000000   Code   RO          166    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000104   0x00000008   Code   RO          167    .ARM.Collect$$$$00000009  mc_w.l(entry8.o)
+    0x0000010c   0x00000004   Code   RO          162    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000110   0x0000011c   Code   RO           19    .text               ECE210.lib(ledbaroutput.o)
+    0x0000022c   0x0000008c   Code   RO          110    .text               ECE210.lib(pushbutton.o)
+    0x000002b8   0x0000028c   Code   RO          122    .text               ECE210.lib(rgb_led.o)
+    0x00000544   0x000000d8   Code   RO          136    .text               ECE210.lib(ece353_systick.o)
+    0x0000061c   0x0000006c   Code   RO          151    .text               mf_w.l(fmul.o)
+    0x00000688   0x00000032   Code   RO          153    .text               mf_w.l(ffixi.o)
+    0x000006ba   0x0000002c   Code   RO          155    .text               mf_w.l(f2d.o)
+    0x000006e6   0x00000002   PAD
+    0x000006e8   0x00000028   Code   RO          157    .text               mf_w.l(cdrcmple.o)
+    0x00000710   0x00000014   Code   RO          159    .text               mf_w.l(cfcmple.o)
+    0x00000724   0x00000000   Code   RO          168    .text               mc_w.l(iusefp.o)
+    0x00000724   0x00000024   Code   RO          169    .text               mc_w.l(init.o)
+    0x00000748   0x0000000e   Code   RO          173    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00000756   0x00000002   Code   RO          174    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00000758   0x0000000e   Code   RO          175    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00000766   0x00000070   Code   RO            1    i.main              lab5.o
+    0x000007d6   0x00000002   PAD
+    0x000007d8   0x00000020   Data   RO          171    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00000120, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000001c   Data   RW          123    .data               ECE210.lib(rgb_led.o)
+    0x2000001c   0x00000004   PAD
+    0x20000020   0x00000100   Zero   RW           12    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       112          0          0          0          0       2031   lab5.o
+       252        242          0          0        256        252   startup_rvmdk.o
+
+    ----------------------------------------------------------------------
+       366        242         32          0        256       2283   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+       216          6          0          0          0       1803   ece353_systick.o
+       284         38          0          0          0       3735   ledbaroutput.o
+       140         22          0          0          0        864   pushbutton.o
+       652         58          0         28          0       1839   rgb_led.o
+         0          0          0          0          0          0   entry.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         8          4          0          0          0          0   entry8.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+        40          2          0          0          0         68   cdrcmple.o
+        20          0          0          0          0         68   cfcmple.o
+        44          0          0          0          0         68   f2d.o
+        50          0          0          0          0         68   ffixi.o
+       108          0          0          0          0         76   fmul.o
+
+    ----------------------------------------------------------------------
+      1642        142          0         28          4       8657   Library Totals
+         2          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1292        124          0         28          0       8241   ECE210.lib
+        86         16          0          0          0         68   mc_w.l
+       262          2          0          0          0        348   mf_w.l
+
+    ----------------------------------------------------------------------
+      1642        142          0         28          4       8657   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2008        384         32         28        260      10472   Grand Totals
+      2008        384         32         28        260      10472   ELF Image Totals
+      2008        384         32         28          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2040 (   1.99kB)
+    Total RW  Size (RW Data + ZI Data)               288 (   0.28kB)
+    Total ROM Size (Code + RO Data + RW Data)       2068 (   2.02kB)
+
+==============================================================================
+
